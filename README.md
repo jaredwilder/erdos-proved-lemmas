@@ -10,6 +10,7 @@ A parent Erdős problem may remain open while a theorem proved inside its invest
 
 | problem | result | evidence |
 |---|---|---|
+| **#52** | for `A_N={2^i3^j:0<=i,j<N}`, `|A_N+A_N| >= C(N,2)^2` while `|A_NA_N|=(2N-1)^2` | exact `v_2/v_3` decoding injection |
 | **#85** | `f(5)=f(6)=f(7)=3` for the minimum-degree/C4 function | elementary proof + exhaustive graph check |
 | **#126** | no three distinct positive integers have all pairwise sums powers of 2 | elementary proof + exhaustive check |
 | **#289** | all-prime p-adic obstruction for finite integral reciprocal sums | elementary p-adic proof; finite head/tail lemma separately formalized |
@@ -18,8 +19,10 @@ A parent Erdős problem may remain open while a theorem proved inside its invest
 | **#373** | no factorial-product solution when `n-1` is prime | elementary divisibility proof |
 | **#396** | construction simultaneously eliminating all small primes in the stated binomial-divisibility setting | valuation/carry argument |
 | **#602** | finite hypergraphs whose edges all have size at least 2 and with no one-point edge intersections are 2-colourable | minimal-counterexample + single-flip proof; independently rechecked |
+| **#681** | `k=1` works iff `n+1` is composite; every witness satisfies `k^4<n+k` | least-prime-factor bound `p(m)<=sqrt(m)` |
 | **#700** | for semiprime `n=pq`, `f(pq)=p` for the binomial-gcd function | divisibility identity + Lucas theorem |
 | **#774** | dissociated subsets of a dyadic block have logarithmic size | subset-sum counting |
+| **#826** | for `k>sqrt(n)`, `τ(n+k)<3k`, reducing the open problem to `k<=sqrt(n)` | divisor pairing `τ(m)<=2sqrt(m)` |
 | **#893** | `τ(2^k-1) >= τ(k)` and a doubling consequence | divisor injection; independently checked |
 | **#978** | `4 ∤ n^4+2` for every integer `n` | congruence proof; independently checked |
 | **#1107** | 87 is not a sum of at most three squarefull numbers | exhaustive finite basis search |
@@ -27,11 +30,14 @@ A parent Erdős problem may remain open while a theorem proved inside its invest
 
 ## Full writeups for the newest routed results
 
+- [`erdos52-multiplicative-box-sumset.md`](erdos52-multiplicative-box-sumset.md)
 - [`erdos85-small-values.md`](erdos85-small-values.md)
 - [`erdos289-padic-reciprocal-obstructions.md`](erdos289-padic-reciprocal-obstructions.md)
 - [`erdos291-leading-p-harmonic-criterion.md`](erdos291-leading-p-harmonic-criterion.md)
 - [`erdos313-fixed-k-finiteness.md`](erdos313-fixed-k-finiteness.md)
+- [`erdos681-fourth-root-window.md`](erdos681-fourth-root-window.md)
 - [`erdos700-semiprime-binomial-gcd.md`](erdos700-semiprime-binomial-gcd.md)
+- [`erdos826-tail-elimination.md`](erdos826-tail-elimination.md)
 
 The original extraction copies remain in the larger `unpublished-math-papers` archive as provenance. Once a result is routed here, this repository is the preferred reading surface for the theorem.
 
