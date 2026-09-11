@@ -1,4 +1,4 @@
-# Erdős #1061 — an infinite sigma solution family and a linear lower bound
+# Erdős #1061 — sigma solution families, linear lower bounds, and a killed counting bound
 
 Author: Jared Wilder. Public release: 2026-09-11.
 
@@ -50,11 +50,41 @@ Indeed, writing `a=2^k m` with `m` odd gives
 
 `σ(2a)-2σ(a)=σ(m)>0`.
 
-The proof is exact. Computational checks in the provenance archive independently reproduce both identities on finite ranges.
+## Exact obstruction — the proposed `r(N) <= τ(N)` bound is false
+
+For a fixed `N`, let
+
+`r(N) = #{(a,b) : a+b=N and σ(a)+σ(b)=σ(N)}`
+
+count ordered solutions on the `N`-diagonal, and let `τ(N)` be the divisor-counting function.
+
+A historical route proposed the pointwise bound
+
+`r(N) <= τ(N)`.
+
+The release-day counterexample audit finally ran the exact finite computation that the route itself had requested. The bound is false. The first recovered failure is
+
+`N=123`, where `r(123)=6 > τ(123)=4`.
+
+The three unordered pairs are
+
+- `(38,85)`, with `σ(38)+σ(85)=60+108=168=σ(123)`;
+- `(41,82)`, with `42+126=168`;
+- `(46,77)`, with `72+96=168`.
+
+Further failures include
+
+`r(141)=6 > 4`
+
+and
+
+`r(183)=8 > 4`.
+
+By `N<=400`, the exact scan reaches `r(N)=10` for some diagonals. Thus any argument for #1061 that uses `r(N)<=τ(N)` as a load-bearing pointwise estimate is dead independently of the separate defect that originally caused that route to be retracted.
 
 ## Larger Erdős #1061 research program
 
-This compact theorem is **not the full public #1061 surface**.
+This compact theorem entry is **not the full public #1061 surface**.
 
 The provenance archive also contains `erdos1061-aliquot-square/`, which develops:
 
@@ -66,4 +96,4 @@ The provenance archive also contains `erdos1061-aliquot-square/`, which develops
 - rigorous released linear-lower-bound coefficients above `2.29549` under the campaign's ordered-pair convention;
 - a Mersenne-power specialization.
 
-That material has grown beyond compact-theorem-bank scale and is tracked for eventual promotion to a dedicated Erdős #1061 problem repository. Until such a repository exists, this file is the concise theorem entry point and the archive directory is the detailed certificate/provenance record.
+Together with the explicit failure of the naive divisor-count bound above, that material is now clearly problem-program scale. It should live in a dedicated Erdős #1061 repository once a writable shell exists; this theorem-bank file remains the concise entry point until then.
