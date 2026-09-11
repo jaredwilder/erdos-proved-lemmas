@@ -1,16 +1,18 @@
 # Erdős proved lemmas
 
-**Finished mathematical lemmas, exact subcases, and structural reductions extracted from larger Erdős research projects.** This repository is the canonical public home for compact proved child results that do not yet justify a larger dedicated subject repository.
+**A compact catalog of finished mathematical lemmas, exact subcases, and structural reductions extracted from larger Erdős research projects.**
 
 Author: Jared Wilder. First public timestamp: 2026-09-11.
 
-A parent Erdős problem may remain open while a theorem proved inside its investigation is complete. Entries here are therefore organized by the statement actually established, not by the status of the larger problem.
+This repository is the preferred home for a finished child theorem **until** the mathematics grows into a richer subject repository. When that happens, this bank keeps a concise statement and points to the fuller home rather than competing with it.
+
+The status of a larger Erdős problem does not determine the status of a theorem proved inside its investigation. Entries are organized by the statement actually established.
 
 ## Results
 
-| problem | result | evidence |
+| problem | result | evidence / fuller home |
 |---|---|---|
-| **#52** | for `A_N={2^i3^j:0<=i,j<N}`, `|A_N+A_N| >= C(N,2)^2` while `|A_NA_N|=(2N-1)^2` | exact `v_2/v_3` decoding injection |
+| **#52** | for `A_N={2^i3^j:0<=i,j<N}`, `|A_N+A_N| >= C(N,2)^2` and `|A_NA_N|=(2N-1)^2` | exact `v_2/v_3` decoding; fuller home: `additive-combinatorics-campaigns` |
 | **#85** | `f(5)=f(6)=f(7)=3` for the minimum-degree/C4 function | elementary proof + exhaustive graph check |
 | **#126** | no three distinct positive integers have all pairwise sums powers of 2 | elementary proof + exhaustive check |
 | **#289** | all-prime p-adic obstruction for finite integral reciprocal sums | elementary p-adic proof; finite head/tail lemma separately formalized |
@@ -19,15 +21,17 @@ A parent Erdős problem may remain open while a theorem proved inside its invest
 | **#359** | every reciprocal prefix of the true `n=1` greedy sequence has sum at least 1 | direct representation-capacity count |
 | **#373** | no factorial-product solution when `n-1` is prime | elementary divisibility proof |
 | **#396** | construction simultaneously eliminating all small primes in the stated binomial-divisibility setting | valuation/carry argument |
-| **#413** | the predecessor condition reduces exactly to an `O_epsilon(log n)` terminal window | `omega(r)<=log_2 r` |
+| **#413** | the predecessor condition reduces exactly to an `O(log n)` terminal window | `omega(r)<=log_2 r` |
 | **#486** | summable forbidden residue mass implies ordinary natural density under the frozen activation rule | periodic truncation + tail bound + Kronecker lemma |
-| **#602** | finite hypergraphs whose edges all have size at least 2 and with no one-point edge intersections are 2-colourable | minimal-counterexample + single-flip proof; independently rechecked |
+| **#602** | finite hypergraphs with edge size at least 2 and no one-point edge intersections are 2-colourable | minimal-counterexample + single-flip proof; corrected hypothesis independently rechecked |
 | **#681** | `k=1` works iff `n+1` is composite; every witness satisfies `k^4<n+k` | least-prime-factor bound `p(m)<=sqrt(m)` |
 | **#700** | for semiprime `n=pq`, `f(pq)=p` for the binomial-gcd function | divisibility identity + Lucas theorem |
-| **#701** | every finite hereditary family of rank at most 2 has maximum intersecting subfamily equal to a largest star | complete graph-structural proof |
+| **#701** | every finite hereditary family of rank at most 2 has maximum intersecting subfamily equal to a largest star | complete graph-structural proof; fuller home: `combinatorial-records` |
 | **#774** | dissociated subsets of a dyadic block have logarithmic size | subset-sum counting |
-| **#826** | for `k>sqrt(n)`, `τ(n+k)<3k`, reducing the open problem to `k<=sqrt(n)` | divisor pairing `τ(m)<=2sqrt(m)` |
+| **#826** | for `k>sqrt(n)`, `τ(n+k)<3k`, reducing the remaining range to `k<=sqrt(n)` | divisor pairing `τ(m)<=2sqrt(m)` |
+| **#890 ↔ #1093** | large-prime binomial identity, deficiency/excess accounting, and admissible LCM divisor-window reduction | exact identities + finite deficiency engine through `k<=45`; standalone-repo candidate |
 | **#893** | `τ(2^k-1) >= τ(k)` and a doubling consequence | divisor injection; independently checked |
+| **#930** | infinitely many length-2 square-product interval pairs; any `r=2` threshold must satisfy `k>=4` | Pell equation + explicit length-3 square witness |
 | **#978** | `4 ∤ n^4+2` for every integer `n` | congruence proof; independently checked |
 | **#1107** | 87 is not a sum of at most three squarefull numbers | exhaustive finite basis search |
 | **#1142** | strong congruence compression for Good numbers, including exactly 288 residue classes modulo 111,546,435 beyond the stated threshold | arithmetic reduction + exhaustive check |
@@ -46,10 +50,12 @@ A parent Erdős problem may remain open while a theorem proved inside its invest
 - [`erdos700-semiprime-binomial-gcd.md`](erdos700-semiprime-binomial-gcd.md)
 - [`erdos701-rank2-hereditary-star.md`](erdos701-rank2-hereditary-star.md)
 - [`erdos826-tail-elimination.md`](erdos826-tail-elimination.md)
+- [`erdos890-1093-bridge.md`](erdos890-1093-bridge.md)
+- [`erdos930-perfect-power-intervals.md`](erdos930-perfect-power-intervals.md)
 
-The original extraction copies remain in the larger `unpublished-math-papers` archive as provenance. Once a result is routed here, this repository is the preferred reading surface for the theorem.
+Original extraction copies may remain in `unpublished-math-papers` as provenance. A richer subject repository, when one exists, is the preferred reading and citation surface.
 
-## Selected older results
+## Selected older proofs
 
 ### Erdős 126
 
@@ -71,47 +77,19 @@ The same factorization gives `τ(2^{2k}-1) >= 2τ(2^k-1)`.
 
 Modulo 16, `n^4` is 0 or 1, so `n^4+2` is 2 or 3 modulo 16. In particular it is never divisible by 4 and hence cannot be a fourth power or any `4r`-th power.
 
-### Erdős 1107
-
-The squarefull numbers below 88 are
-
-`1,4,8,9,16,25,27,32,36,49,64,72,81`.
-
-Exhaustive search over sums of at most three of them, with repetition, gives no representation of 87.
-
-### Erdős 373
-
-If `p=n-1` is prime, every factorial `a_i!` with `a_i<n-1` is prime to `p`, while `p|n!`. Hence an identity `n!=a_1!...a_k!` with all `a_i<n-1` is impossible.
-
-### Erdős 602
+### Erdős 602 — corrected hypothesis
 
 Let `H` be a finite hypergraph in which every edge has at least two vertices and no two distinct edges meet in exactly one vertex. Then `H` is 2-colourable.
 
-Suppose not, and choose a counterexample with the minimum number of edges. Remove an edge `e` and properly 2-colour the remaining hypergraph. If `e` is bichromatic we are done, so assume `e` is all red. Choose `v∈e` and flip only `v` to blue. Since `|e|≥2`, `e` is now bichromatic. If another edge `f` becomes monochromatic, it must become all blue and must contain `v`; before the flip `v` was its unique red vertex. Every other vertex of `e` remains red, so none lies in `f`, giving `e∩f={v}`, contradiction.
+Choose a counterexample with the minimum number of edges. Remove one edge `e` and colour the rest. If `e` is monochromatic, flip one vertex `v∈e`. Any other edge made monochromatic by that flip would have intersected `e` only in `v`, contradicting the hypothesis.
 
-The edge-size hypothesis is necessary for the theorem as stated: the one-edge hypergraph `{{v}}` has no pair of distinct edges meeting in one vertex but is not 2-colourable. An earlier release sentence claiming that no lower bound on edge size was needed was too strong and is corrected here. A brute-force regression over all hypergraphs on at most four vertices satisfying the corrected hypotheses found no counterexample; `K_4^3` is also explicitly 2-colourable by a 2–2 split.
+The edge-size condition is necessary: the one-edge hypergraph `{{v}}` is a counterexample without it. The earlier stronger sentence is therefore corrected locally rather than turned into a disclaimer for the rest of the repository.
 
-### Erdős 774
+## Verification and literature status
 
-For a dissociated set `D`, all `2^|D|` subset sums are distinct and at most `2N|D|` in a dyadic block. Thus
+Some entries have independent finite checks, some have formal fragments, and some are ordinary proofs. Each writeup states its own evidence.
 
-`2^|D| <= 2N|D|+1`,
-
-so `|D| <= log_2 N + O(log log N)`.
-
-### Erdős 1142
-
-The released congruence analysis gives
-
-`n>21 => n ≡ 0,45,75 (mod 105)`,
-
-and beyond the stronger threshold every counterexample lies in exactly 288 residue classes modulo 111,546,435. The even case is complete: the only even Good number is 4.
-
-## Verification and corrections
-
-Some entries have independent finite checks, some have formal fragments, and some are ordinary proofs. Each writeup states its own evidence. Historical novelty is a separate literature question.
-
-If a later audit corrects an entry, the correction should be attached to that entry rather than used as a disclaimer for unrelated theorems.
+Historical novelty is a separate literature question. Corrections attach to the result they correct.
 
 ## License
 
