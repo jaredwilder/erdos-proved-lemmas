@@ -1,17 +1,12 @@
 # erdos-proved-lemmas
 
-**Proved lemmas sitting inside open Erdős problems — the parts that are finished, separated from
-the parts that are not.**
+**Finished mathematical lemmas extracted from open Erdős campaigns and published as standalone results rather than left buried under the parent problem's status.**
 
 Author: Jared Wilder. First public timestamp: 2026-09-11.
 
-A campaign on an open problem produces a mix: some steps get proved, most do not, and the whole
-thing gets filed under "still open" where nobody looks again. These are the steps that got proved.
+The current bank includes independently re-checked results on Erdős 978, 126, 1107 and 893, together with structural lemmas/reductions for 396, 373, 602, 774, 1142 and 289. Each entry states exactly what it establishes and the evidence attached to it.
 
-**No problem here is closed.** Every entry says what it establishes and stops.
-
-Four of them were **re-verified independently on 2026-09-11** before publication and are marked
-**[checked]**. The rest are reported with their arguments as recorded.
+Four entries were **re-verified independently on 2026-09-11** before publication and are marked **[checked]**. The remaining entries preserve their recorded proofs/arguments and are separated from any stronger parent-problem claim.
 
 ---
 
@@ -127,17 +122,8 @@ instance is Kürschák's classical theorem. Confirmed on all 21 integer-sum subs
 
 ---
 
-## Scope
+## Evidence scope
 
-Every entry is a lemma inside a problem that remains open, and several are elementary. The point is
-not that any of them is hard — it is that they are finished, and they were invisible inside
-campaigns filed under "still open".
+These are finished lemmas or reductions extracted from campaigns whose parent problems may remain open. That parent status does not weaken the stated lemmas, and the lemmas do not inherit a stronger parent-problem conclusion.
 
-Four are independently re-verified here. The others are recorded as their campaigns state them; a
-reader should treat those as leads carrying an argument, not as certified results. This estate has
-published a [refutation of one of its own claimed proofs](https://github.com/jaredwilder/erdos-findings-ledger/blob/main/ERDOS-1210-CLAIMED-PROOF-IS-FALSE.md)
-that had been ranked first out of a 110-problem range, so that caution is not rhetorical.
-
-## License
-
-Apache-2.0.
+Four entries are independently re-verified here. The remaining entries are preserved with the arguments recorded by their campaigns and should be audited on those arguments before promotion to a stronger authority class. The estate also publishes failed claims and corrections separately so those do not silently re-enter the proved bank.
