@@ -46,6 +46,8 @@ hence
 
 ## Scope and correction boundary
 
-This is a necessary ceiling on any universal exponent `c`; it is not a proof that this ceiling is attainable. Earlier ore contained a false `(10,5)` derivation based on the incorrect value `C(10,5)=?`; that poisoned route is not used here.
+This is a necessary ceiling on any universal exponent `c`; it is not a proof that this ceiling is attainable.
+
+An earlier ore route tried to force a different ceiling from `(n,k)=(10,5)`. That argument is false: `C(10,5)=252` and its largest prime factor is `7`, while `min(6,5^(1+c))<=6`, so this instance imposes no restriction on `c`. That poisoned route is not used here.
 
 Historical novelty is not claimed.
