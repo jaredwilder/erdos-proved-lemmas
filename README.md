@@ -8,6 +8,12 @@ This repository is the preferred home for a finished child theorem **until** the
 
 The status of a larger Erdős problem does not determine the status of a theorem proved inside its investigation. Entries are organized by the statement actually established.
 
+## Reviewed-estate accounting
+
+The table below is a **reader-facing selection**, not the exhaustive release ledger. For the reviewed 56-row canonical-gold tranche, see [`CANONICAL-GOLD-56-DISPOSITION.md`](CANONICAL-GOLD-56-DISPOSITION.md): all 56 reviewed rows have a terminal public disposition, with **47 routed / routed-corrected and 9 subsumed**.
+
+That accounting closes only the reviewed 56-row tranche. It does **not** declare the larger ore estate saturated; the remaining latest-local `PROVED` states, contradiction histories, formalizer obligations and raw theorem-bearing archives are separate mining surfaces.
+
 ## Results
 
 | problem | result | evidence / fuller home |
@@ -15,12 +21,13 @@ The status of a larger Erdős problem does not determine the status of a theorem
 | **#51** | if `phi(n)=a` and `R(a)=max{r:r!<=a}`, then every preimage satisfies `n<=a 2^R(a)` | Euler product + factorial bound on distinct prime factors |
 | **#52** | for `A_N={2^i3^j:0<=i,j<N}`, `|A_N+A_N| >= C(N,2)^2` and `|A_NA_N|=(2N-1)^2` | exact `v_2/v_3` decoding; fuller home: `additive-combinatorics-campaigns` |
 | **#85** | `f(5)=f(6)=f(7)=3` for the minimum-degree/C4 function | elementary proof + exhaustive graph check |
-| **#126** | no three distinct positive integers have all pairwise sums powers of 2 | elementary proof + exhaustive check |
+| **#126** | no three distinct positive integers have all pairwise sums powers of 2 | elementary proof + exhaustive check; positivity is load-bearing |
 | **#155** | `F(N+1)<=F(N)+1` for every `N` in the Sidon extremal function | exact deletion argument; this is only the `k=1` canonical slice |
-| **#170** | exact value `F(10)=6` for the difference-cover function | parity obstruction for five points + explicit six-point witness |
+| **#170** | sparse-ruler exact table through `N=20`, parity obstruction, corrected constant, and `F(10)=6` | exhaustive enumeration + analytic correction; see `erdos170-sparse-ruler-results.md` |
 | **#276** | common divisors of a Fibonacci-type recurrence are exactly the common divisors of the two seeds | direct induction; seed-gcd reduction |
 | **#289** | all-prime p-adic obstruction for finite integral reciprocal sums | elementary p-adic proof; finite head/tail lemma separately formalized |
 | **#291** | corrected leading-`p` harmonic divisibility criterion using `q=floor(n/p^e)` | analytic proof + finite regression |
+| **#295** | exact small slice `k(3)=5` for reciprocal representations of 1 | explicit five-denominator witness + four-term reciprocal upper bound |
 | **#313** | for fixed `k`, only finitely many reciprocal-prime solutions exist | elementary finite-branching proof |
 | **#359** | every reciprocal prefix of the true `n=1` greedy sequence has sum at least 1 | direct representation-capacity count |
 | **#373** | no factorial-product solution when `n-1` is prime | elementary divisibility proof |
@@ -37,6 +44,7 @@ The status of a larger Erdős problem does not determine the status of a theorem
 | **#579** | in a `K_{2,2,2}`-free graph, the common neighborhood of any two vertices is `K_{2,2}`-free | direct six-vertex obstruction; strengthens recovered nonadjacent-pair statement |
 | **#602** | every countable family of infinite sets has a 2-colouring making every member bichromatic | fresh-point recursion; intersection hypotheses unnecessary in countable stratum |
 | **#602 finite analogue** | finite hypergraphs with edge size at least 2 and no one-point edge intersections are 2-colourable | minimal-counterexample + single-flip proof; corrected hypothesis independently rechecked |
+| **#677** | complete `k=2` slice: `M(n,2)=(n+1)(n+2)` is strictly increasing | consecutive coprimality; exact base case |
 | **#681** | `k=1` works iff `n+1` is composite; every witness satisfies `k^4<n+k` | least-prime-factor bound `p(m)<=sqrt(m)` |
 | **#700** | for semiprime `n=pq`, `f(pq)=p` for the binomial-gcd function | divisibility identity + Lucas theorem |
 | **#701** | every finite hereditary family of rank at most 2 has maximum intersecting subfamily equal to a largest star | complete graph-structural proof; fuller home: `combinatorial-records` |
@@ -49,17 +57,21 @@ The status of a larger Erdős problem does not determine the status of a theorem
 | **#1073** | if `u>1` divides `n!+1`, every prime factor of `u` exceeds `n`; composite `u>n^2` | elementary modular contradiction |
 | **#1107** | 87 is not a sum of at most three squarefull numbers | exhaustive finite basis search |
 | **#1142** | strong congruence compression for Good numbers, including exactly 288 residue classes modulo 111,546,435 beyond the stated threshold | arithmetic reduction + exhaustive check |
+| **#1210** | any explicit uniform additive constant in the canonical inequality must satisfy `C>=1` | endpoint `n=2`, `A={1}`; constraint only, not existence proof |
 
 ## Full writeups for routed results
 
+- [`CANONICAL-GOLD-56-DISPOSITION.md`](CANONICAL-GOLD-56-DISPOSITION.md) — terminal public disposition of the reviewed 56-row tranche
 - [`erdos51-totient-preimage-size.md`](erdos51-totient-preimage-size.md)
 - [`erdos52-multiplicative-box-sumset.md`](erdos52-multiplicative-box-sumset.md)
 - [`erdos85-small-values.md`](erdos85-small-values.md)
 - [`erdos155-k1-sidon-monotonicity.md`](erdos155-k1-sidon-monotonicity.md)
 - [`erdos170-exact-f10.md`](erdos170-exact-f10.md)
+- [`erdos170-sparse-ruler-results.md`](erdos170-sparse-ruler-results.md)
 - [`erdos276-common-divisors.md`](erdos276-common-divisors.md)
 - [`erdos289-padic-reciprocal-obstructions.md`](erdos289-padic-reciprocal-obstructions.md)
 - [`erdos291-leading-p-harmonic-criterion.md`](erdos291-leading-p-harmonic-criterion.md)
+- [`erdos295-exact-k3.md`](erdos295-exact-k3.md)
 - [`erdos313-fixed-k-finiteness.md`](erdos313-fixed-k-finiteness.md)
 - [`erdos359-reciprocal-prefix-invariant.md`](erdos359-reciprocal-prefix-invariant.md)
 - [`erdos385-elementary-baseline.md`](erdos385-elementary-baseline.md)
@@ -73,6 +85,7 @@ The status of a larger Erdős problem does not determine the status of a theorem
 - [`erdos495-diagonal-littlewood.md`](erdos495-diagonal-littlewood.md)
 - [`erdos579-common-neighborhood.md`](erdos579-common-neighborhood.md)
 - [`erdos602-countable-family-colouring.md`](erdos602-countable-family-colouring.md)
+- [`erdos677-k2-lcm-slice.md`](erdos677-k2-lcm-slice.md)
 - [`erdos681-fourth-root-window.md`](erdos681-fourth-root-window.md)
 - [`erdos700-semiprime-binomial-gcd.md`](erdos700-semiprime-binomial-gcd.md)
 - [`erdos701-rank2-hereditary-star.md`](erdos701-rank2-hereditary-star.md)
@@ -80,6 +93,7 @@ The status of a larger Erdős problem does not determine the status of a theorem
 - [`erdos890-1093-bridge.md`](erdos890-1093-bridge.md)
 - [`erdos930-perfect-power-intervals.md`](erdos930-perfect-power-intervals.md)
 - [`erdos1073-factorial-plus-one-barrier.md`](erdos1073-factorial-plus-one-barrier.md)
+- [`erdos1210-additive-constant-endpoint.md`](erdos1210-additive-constant-endpoint.md)
 
 Original extraction copies may remain in `unpublished-math-papers` as provenance. A richer subject repository, when one exists, is the preferred reading and citation surface.
 
