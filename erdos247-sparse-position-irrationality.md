@@ -60,7 +60,7 @@ then the gaps are unbounded: bounded gaps would imply `a_n=O(n)`. Hence
 
 The original base-2 theorem is one instance of this all-base result.
 
-## Companion density equivalence
+## Theorem 4 — density/sparsity equivalence
 
 If
 
@@ -72,13 +72,40 @@ then
 
 \[
 \boxed{
-\limsup a_n/n=\infty
+\limsup_{n\to\infty} a_n/n=\infty
 \iff
-\liminf A(N)/N=0.
+\liminf_{N\to\infty} A(N)/N=0.
 }
 \]
 
-One direction evaluates at `N=a_n`, where `A(a_n)=n`. Conversely, along `N_j` with `A(N_j)/N_j→0`, set `n_j=A(N_j)+1`; then `a_{n_j}>N_j` and `a_{n_j}/n_j→∞`.
+### Proof
+
+If `a_{n_j}/n_j -> infinity`, take `N_j=a_{n_j}`. Then `A(N_j)=n_j`, so
+
+\[
+A(N_j)/N_j=n_j/a_{n_j}\to0.
+\]
+
+Conversely, choose `N_j` with `A(N_j)/N_j->0` and put `n_j=A(N_j)+1`. Then `a_{n_j}>N_j`, hence
+
+\[
+\frac{a_{n_j}}{n_j}>
+\frac{N_j}{A(N_j)+1}\to\infty.
+\]
+
+## Correction history — a valid route was killed by an impossible counterexample
+
+The release-day counterexample audit recovered a historical route (`R013`) that had been marked killed because it supposedly contradicted Theorem 4. The proposed counterexample required simultaneously
+
+`limsup a_n/n = infinity`
+
+and
+
+`liminf A(N)/N = 1`.
+
+That combination is impossible. Since always `A(N)<=N`, the second condition forces `A(N)/N->1`; evaluating at `N=a_n` gives `n/a_n->1`, hence `a_n/n->1`, contradicting the first condition.
+
+Thus the historical kill was invalid. The density equivalence above is restored as an elementary exact theorem and should not be treated as a retired route.
 
 ## Scope and literature
 
