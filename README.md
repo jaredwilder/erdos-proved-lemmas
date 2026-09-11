@@ -16,11 +16,15 @@ A parent Erdős problem may remain open while a theorem proved inside its invest
 | **#289** | all-prime p-adic obstruction for finite integral reciprocal sums | elementary p-adic proof; finite head/tail lemma separately formalized |
 | **#291** | corrected leading-`p` harmonic divisibility criterion using `q=floor(n/p^e)` | analytic proof + finite regression |
 | **#313** | for fixed `k`, only finitely many reciprocal-prime solutions exist | elementary finite-branching proof |
+| **#359** | every reciprocal prefix of the true `n=1` greedy sequence has sum at least 1 | direct representation-capacity count |
 | **#373** | no factorial-product solution when `n-1` is prime | elementary divisibility proof |
 | **#396** | construction simultaneously eliminating all small primes in the stated binomial-divisibility setting | valuation/carry argument |
+| **#413** | the predecessor condition reduces exactly to an `O_epsilon(log n)` terminal window | `omega(r)<=log_2 r` |
+| **#486** | summable forbidden residue mass implies ordinary natural density under the frozen activation rule | periodic truncation + tail bound + Kronecker lemma |
 | **#602** | finite hypergraphs whose edges all have size at least 2 and with no one-point edge intersections are 2-colourable | minimal-counterexample + single-flip proof; independently rechecked |
 | **#681** | `k=1` works iff `n+1` is composite; every witness satisfies `k^4<n+k` | least-prime-factor bound `p(m)<=sqrt(m)` |
 | **#700** | for semiprime `n=pq`, `f(pq)=p` for the binomial-gcd function | divisibility identity + Lucas theorem |
+| **#701** | every finite hereditary family of rank at most 2 has maximum intersecting subfamily equal to a largest star | complete graph-structural proof |
 | **#774** | dissociated subsets of a dyadic block have logarithmic size | subset-sum counting |
 | **#826** | for `k>sqrt(n)`, `τ(n+k)<3k`, reducing the open problem to `k<=sqrt(n)` | divisor pairing `τ(m)<=2sqrt(m)` |
 | **#893** | `τ(2^k-1) >= τ(k)` and a doubling consequence | divisor injection; independently checked |
@@ -28,15 +32,19 @@ A parent Erdős problem may remain open while a theorem proved inside its invest
 | **#1107** | 87 is not a sum of at most three squarefull numbers | exhaustive finite basis search |
 | **#1142** | strong congruence compression for Good numbers, including exactly 288 residue classes modulo 111,546,435 beyond the stated threshold | arithmetic reduction + exhaustive check |
 
-## Full writeups for the newest routed results
+## Full writeups for routed results
 
 - [`erdos52-multiplicative-box-sumset.md`](erdos52-multiplicative-box-sumset.md)
 - [`erdos85-small-values.md`](erdos85-small-values.md)
 - [`erdos289-padic-reciprocal-obstructions.md`](erdos289-padic-reciprocal-obstructions.md)
 - [`erdos291-leading-p-harmonic-criterion.md`](erdos291-leading-p-harmonic-criterion.md)
 - [`erdos313-fixed-k-finiteness.md`](erdos313-fixed-k-finiteness.md)
+- [`erdos359-reciprocal-prefix-invariant.md`](erdos359-reciprocal-prefix-invariant.md)
+- [`erdos413-logarithmic-window.md`](erdos413-logarithmic-window.md)
+- [`erdos486-summable-forbidden-mass.md`](erdos486-summable-forbidden-mass.md)
 - [`erdos681-fourth-root-window.md`](erdos681-fourth-root-window.md)
 - [`erdos700-semiprime-binomial-gcd.md`](erdos700-semiprime-binomial-gcd.md)
+- [`erdos701-rank2-hereditary-star.md`](erdos701-rank2-hereditary-star.md)
 - [`erdos826-tail-elimination.md`](erdos826-tail-elimination.md)
 
 The original extraction copies remain in the larger `unpublished-math-papers` archive as provenance. Once a result is routed here, this repository is the preferred reading surface for the theorem.
