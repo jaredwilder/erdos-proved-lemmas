@@ -51,3 +51,19 @@ Indeed, writing `a=2^k m` with `m` odd gives
 `σ(2a)-2σ(a)=σ(m)>0`.
 
 The proof is exact. Computational checks in the provenance archive independently reproduce both identities on finite ranges.
+
+## Larger Erdős #1061 research program
+
+This compact theorem is **not the full public #1061 surface**.
+
+The provenance archive also contains `erdos1061-aliquot-square/`, which develops:
+
+- an aliquot-square primitive-seed generator;
+- a primitive-ray scaling theorem;
+- an exact certificate bank of **152,803 primitive seeds** with `a+b<=200000`;
+- an integer-only certificate verifier;
+- a second exact generator search through `a<=5,000,000`;
+- rigorous released linear-lower-bound coefficients above `2.29549` under the campaign's ordered-pair convention;
+- a Mersenne-power specialization.
+
+That material has grown beyond compact-theorem-bank scale and is tracked for eventual promotion to a dedicated Erdős #1061 problem repository. Until such a repository exists, this file is the concise theorem entry point and the archive directory is the detailed certificate/provenance record.
