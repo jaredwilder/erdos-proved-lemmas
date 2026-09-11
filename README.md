@@ -17,7 +17,7 @@ A parent Erdős problem may remain open while a theorem proved inside its invest
 | **#313** | for fixed `k`, only finitely many reciprocal-prime solutions exist | elementary finite-branching proof |
 | **#373** | no factorial-product solution when `n-1` is prime | elementary divisibility proof |
 | **#396** | construction simultaneously eliminating all small primes in the stated binomial-divisibility setting | valuation/carry argument |
-| **#602** | finite hypergraphs with no one-point edge intersections are 2-colourable | minimal-counterexample argument |
+| **#602** | finite hypergraphs whose edges all have size at least 2 and with no one-point edge intersections are 2-colourable | minimal-counterexample + single-flip proof; independently rechecked |
 | **#700** | for semiprime `n=pq`, `f(pq)=p` for the binomial-gcd function | divisibility identity + Lucas theorem |
 | **#774** | dissociated subsets of a dyadic block have logarithmic size | subset-sum counting |
 | **#893** | `τ(2^k-1) >= τ(k)` and a doubling consequence | divisor injection; independently checked |
@@ -71,7 +71,11 @@ If `p=n-1` is prime, every factorial `a_i!` with `a_i<n-1` is prime to `p`, whil
 
 ### Erdős 602
 
-In a minimal non-2-colourable finite hypergraph with no pair of edges meeting in exactly one vertex, minimality first makes the hypergraph Sperner. A single-vertex colour flip then yields the contradiction; the only obstruction would be a forbidden one-point edge intersection.
+Let `H` be a finite hypergraph in which every edge has at least two vertices and no two distinct edges meet in exactly one vertex. Then `H` is 2-colourable.
+
+Suppose not, and choose a counterexample with the minimum number of edges. Remove an edge `e` and properly 2-colour the remaining hypergraph. If `e` is bichromatic we are done, so assume `e` is all red. Choose `v∈e` and flip only `v` to blue. Since `|e|≥2`, `e` is now bichromatic. If another edge `f` becomes monochromatic, it must become all blue and must contain `v`; before the flip `v` was its unique red vertex. Every other vertex of `e` remains red, so none lies in `f`, giving `e∩f={v}`, contradiction.
+
+The edge-size hypothesis is necessary for the theorem as stated: the one-edge hypergraph `{{v}}` has no pair of distinct edges meeting in one vertex but is not 2-colourable. An earlier release sentence claiming that no lower bound on edge size was needed was too strong and is corrected here. A brute-force regression over all hypergraphs on at most four vertices satisfying the corrected hypotheses found no counterexample; `K_4^3` is also explicitly 2-colourable by a 2–2 split.
 
 ### Erdős 774
 
