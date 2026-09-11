@@ -15,15 +15,21 @@ The status of a larger Erdős problem does not determine the status of a theorem
 | **#52** | for `A_N={2^i3^j:0<=i,j<N}`, `|A_N+A_N| >= C(N,2)^2` and `|A_NA_N|=(2N-1)^2` | exact `v_2/v_3` decoding; fuller home: `additive-combinatorics-campaigns` |
 | **#85** | `f(5)=f(6)=f(7)=3` for the minimum-degree/C4 function | elementary proof + exhaustive graph check |
 | **#126** | no three distinct positive integers have all pairwise sums powers of 2 | elementary proof + exhaustive check |
+| **#155** | `F(N+1)<=F(N)+1` for every `N` in the Sidon extremal function | exact deletion argument; this is only the `k=1` canonical slice |
+| **#276** | common divisors of a Fibonacci-type recurrence are exactly the common divisors of the two seeds | direct induction; seed-gcd reduction |
 | **#289** | all-prime p-adic obstruction for finite integral reciprocal sums | elementary p-adic proof; finite head/tail lemma separately formalized |
 | **#291** | corrected leading-`p` harmonic divisibility criterion using `q=floor(n/p^e)` | analytic proof + finite regression |
 | **#313** | for fixed `k`, only finitely many reciprocal-prime solutions exist | elementary finite-branching proof |
 | **#359** | every reciprocal prefix of the true `n=1` greedy sequence has sum at least 1 | direct representation-capacity count |
 | **#373** | no factorial-product solution when `n-1` is prime | elementary divisibility proof |
+| **#385** | `F(n)>=n` for all `n>=5`, and `F(n)>=n+1` for odd `n>=5` | explicit even-composite predecessor witnesses |
+| **#390** | every admissible factorization has largest factor at least `2p_*(n)` when `p_*(n)>n/2` | unique large-prime carrier argument |
 | **#396** | construction simultaneously eliminating all small primes in the stated binomial-divisibility setting | valuation/carry argument |
 | **#413** | the predecessor condition reduces exactly to an `O(log n)` terminal window | `omega(r)<=log_2 r` |
+| **#456** | for every odd prime `p`, `m_(p-1)=p_(p-1)=p`; `p=2` is an endpoint exception | totient bound + residue-class minimum |
 | **#486** | summable forbidden residue mass implies ordinary natural density under the frozen activation rule | periodic truncation + tail bound + Kronecker lemma |
-| **#602** | finite hypergraphs with edge size at least 2 and no one-point edge intersections are 2-colourable | minimal-counterexample + single-flip proof; corrected hypothesis independently rechecked |
+| **#602** | every countable family of infinite sets has a 2-colouring making every member bichromatic | fresh-point recursion; intersection hypotheses unnecessary in countable stratum |
+| **#602 finite analogue** | finite hypergraphs with edge size at least 2 and no one-point edge intersections are 2-colourable | minimal-counterexample + single-flip proof; corrected hypothesis independently rechecked |
 | **#681** | `k=1` works iff `n+1` is composite; every witness satisfies `k^4<n+k` | least-prime-factor bound `p(m)<=sqrt(m)` |
 | **#700** | for semiprime `n=pq`, `f(pq)=p` for the binomial-gcd function | divisibility identity + Lucas theorem |
 | **#701** | every finite hereditary family of rank at most 2 has maximum intersecting subfamily equal to a largest star | complete graph-structural proof; fuller home: `combinatorial-records` |
@@ -40,12 +46,18 @@ The status of a larger Erdős problem does not determine the status of a theorem
 
 - [`erdos52-multiplicative-box-sumset.md`](erdos52-multiplicative-box-sumset.md)
 - [`erdos85-small-values.md`](erdos85-small-values.md)
+- [`erdos155-k1-sidon-monotonicity.md`](erdos155-k1-sidon-monotonicity.md)
+- [`erdos276-common-divisors.md`](erdos276-common-divisors.md)
 - [`erdos289-padic-reciprocal-obstructions.md`](erdos289-padic-reciprocal-obstructions.md)
 - [`erdos291-leading-p-harmonic-criterion.md`](erdos291-leading-p-harmonic-criterion.md)
 - [`erdos313-fixed-k-finiteness.md`](erdos313-fixed-k-finiteness.md)
 - [`erdos359-reciprocal-prefix-invariant.md`](erdos359-reciprocal-prefix-invariant.md)
+- [`erdos385-elementary-baseline.md`](erdos385-elementary-baseline.md)
+- [`erdos390-largest-prime-carrier.md`](erdos390-largest-prime-carrier.md)
 - [`erdos413-logarithmic-window.md`](erdos413-logarithmic-window.md)
+- [`erdos456-odd-prime-anchor.md`](erdos456-odd-prime-anchor.md)
 - [`erdos486-summable-forbidden-mass.md`](erdos486-summable-forbidden-mass.md)
+- [`erdos602-countable-family-colouring.md`](erdos602-countable-family-colouring.md)
 - [`erdos681-fourth-root-window.md`](erdos681-fourth-root-window.md)
 - [`erdos700-semiprime-binomial-gcd.md`](erdos700-semiprime-binomial-gcd.md)
 - [`erdos701-rank2-hereditary-star.md`](erdos701-rank2-hereditary-star.md)
@@ -77,7 +89,7 @@ The same factorization gives `τ(2^{2k}-1) >= 2τ(2^k-1)`.
 
 Modulo 16, `n^4` is 0 or 1, so `n^4+2` is 2 or 3 modulo 16. In particular it is never divisible by 4 and hence cannot be a fourth power or any `4r`-th power.
 
-### Erdős 602 — corrected hypothesis
+### Erdős 602 — corrected finite analogue
 
 Let `H` be a finite hypergraph in which every edge has at least two vertices and no two distinct edges meet in exactly one vertex. Then `H` is 2-colourable.
 
