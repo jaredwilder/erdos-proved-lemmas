@@ -56,3 +56,7 @@ The theorem is nevertheless a genuine global obstruction family, not finite-sear
 ## License
 
 Apache-2.0.
+
+## Related fixed-row theorem
+
+The [fixed-row coprime-run identity](https://github.com/jaredwilder/erdos-findings-ledger/blob/main/theorems/ERDOS-1212-ROW-RUN-COORDINATE.md) is a separate local theorem: for `x≥2`, the maximum consecutive run of coprime vertices is `g(rad(x))−1`, where `g(n)` is the least block length forcing a noncoprime entry. Run length counts vertices. Even rows have no vertical edge. That identity is not the isolated-vertex family proved on this page.

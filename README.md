@@ -38,6 +38,7 @@ That accounting closes only the reviewed 56-row tranche. It does **not** declare
 | **#400** | `g_k(n)<=k(floor(log_2 n)+1)` and `g_k(m!)>=m+k-3` | Legendre binary digit sums + explicit factorial tuple; logarithmic upper order is classical |
 | **#413** | the predecessor condition reduces exactly to an `O(log n)` terminal window | `omega(r)<=log_2 r` |
 | **#456** | for every odd prime `p`, `m_(p-1)=p_(p-1)=p`; `p=2` is an endpoint exception | totient bound + residue-class minimum |
+| **#477** | no integer quadratic image admits a unique additive complement in Z | [complete written reflection proof](erdos477-all-quadratics.md); square-case Lean layer linked separately |
 | **#486** | summable forbidden residue mass implies ordinary natural density under the frozen activation rule | periodic truncation + tail bound + Kronecker lemma |
 | **#489** | finite forbidden-divisor sets have an exact cyclic squared-gap mean | periodicity modulo `lcm(A)` + period averaging |
 | **#495** | Littlewood's conclusion holds for every diagonal pair `(alpha,alpha)` and whenever either coordinate is rational | Dirichlet/continued-fraction approximation |
@@ -80,6 +81,7 @@ That accounting closes only the reviewed 56-row tranche. It does **not** declare
 - [`erdos400-elementary-log-bound.md`](erdos400-elementary-log-bound.md)
 - [`erdos413-logarithmic-window.md`](erdos413-logarithmic-window.md)
 - [`erdos456-odd-prime-anchor.md`](erdos456-odd-prime-anchor.md)
+- [`erdos477-all-quadratics.md`](erdos477-all-quadratics.md)
 - [`erdos486-summable-forbidden-mass.md`](erdos486-summable-forbidden-mass.md)
 - [`erdos489-finite-periodic-gap-square.md`](erdos489-finite-periodic-gap-square.md)
 - [`erdos495-diagonal-littlewood.md`](erdos495-diagonal-littlewood.md)

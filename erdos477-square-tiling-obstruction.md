@@ -33,3 +33,6 @@ Finally, if `A` is finite then `A+B` is bounded below, because `B` is nonnegativ
 ## Scope
 
 This proves the square-value slice exactly. Historical novelty is not claimed.
+## All integer quadratics
+
+The [all-quadratic written proof](erdos477-all-quadratics.md) removes the finite-complement assumption and treats every `a x²+b x+c` with integer coefficients and `a≠0`. Its proof status is stated separately from the square-case Lean source.

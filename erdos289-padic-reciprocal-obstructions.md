@@ -14,11 +14,11 @@ Fix a prime `p` and define
 
 Then
 
-`v_p(U_p) >= 1`.
+`v_p(U_p) >= 1`, using the convention `v_p(0)=+∞`.
 
 ### Proof
 
-Write
+If `U_p=0`, the assertion is immediate. Otherwise write
 
 `T = U_p/p + V_p`,
 
@@ -50,7 +50,7 @@ The term corresponding to the unique denominator with maximal `v_2` is odd, whil
 
 Suppose finitely many consecutive-integer blocks are added and the resulting reciprocal sum is an integer.
 
-For each block, record the maximum `v_2` attained by a denominator in that block. Let `M` be the largest such level among all blocks.
+For each block, record the maximum `v_2` attained by a denominator in that block. Let `M` be the largest such level among all blocks, and assume `M≥1` (at least one denominator is even). The blocks consist of positive integers; occurrences are counted with multiplicity if blocks overlap.
 
 Then **an even number of blocks must attain the global level `M`**.
 
@@ -67,3 +67,9 @@ A separate exact reduction for reciprocal-interval decompositions of 1 shows tha
 The all-prime and 2-adic parity theorems are unconditional. The `b<=60` tail obstruction is a finite statement and should be read at exactly that range.
 
 Historical novelty is not claimed.
+
+## Reader map and proof authority
+
+The all-prime argument above is a written proof. The [formal campaign directory](https://github.com/jaredwilder/erdos-theorems/tree/main/theorems/erdos289-campaign-001) contains `Erdos289Head.lean`, two `msl_erdos289_a_m01` files, and their available axiom/verification records. Those are narrower head and finite-tail artifacts; they do not establish a kernel check of the entire all-prime theorem above. The finite tail range remains `5≤a<b≤60`.
+
+Theorem 3 explicitly requires `M≥1`: without it, the single block `[1,1]` has integer sum and one block at level zero, contradicting the unqualified parity wording. This hypothesis clarification was added on 2026-09-13; it does not change the all-prime theorem or the interval theorem with at least two terms.
