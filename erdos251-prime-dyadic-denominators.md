@@ -71,8 +71,37 @@ Unbounded powers of two in the denominators of partial sums do **not by themselv
 
 Several earlier route ideas based on reading binary digits directly were killed by carry propagation; this denominator theorem survives those kills because it is only a finite exact parity statement for every `N`.
 
+## Adversarial correction: a stale claimed full proof is false
+
+One historical high-value row asserted the much stronger lemma:
+
+> every strictly increasing positive integer sequence `(a_n)` for which `sum a_n/2^n` converges has an irrational sum.
+
+That statement is false. Take
+
+\[
+a_n=n.
+\]
+
+Then `(a_n)` is strictly increasing and
+
+\[
+\sum_{n=1}^{\infty}\frac{n}{2^n}=2,
+\]
+
+which is rational.
+
+The estate's later adversarial mine independently records this same counterexample and marks the purported general irrationality lemma as refuted. It also records separate failures of local binary-digit arguments caused by unbounded carry propagation.
+
+Therefore the old `PROVED` row claiming an immediate full solution of #251 is quarantined and superseded by this boundary:
+
+- exact finite denominator growth: **proved for every `N`**;
+- tested absence of short binary periods: **finite evidence only**;
+- general increasing-sequence irrationality lemma: **false**;
+- irrationality of the prime series itself: **not established here**.
+
 ## Evidence boundary
 
-The all-`N` proof above is elementary. The recovered estate also replayed the identity by exact `Fraction` arithmetic through finite ranges (including `N≤10` and `N≤25`), but those computations are corroboration rather than the reason the theorem holds.
+The all-`N` denominator proof above is elementary. The recovered estate also replayed the identity by exact `Fraction` arithmetic through finite ranges (including `N≤10` and `N≤25`), but those computations are corroboration rather than the reason the theorem holds.
 
 Historical novelty is not asserted.
