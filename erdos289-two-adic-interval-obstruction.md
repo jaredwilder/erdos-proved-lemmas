@@ -1,8 +1,92 @@
-# Erdős #289 — unique maximal 2-adic denominator obstruction
+# Erdős #289 — all-prime p-adic obstruction and the 2-adic interval ledger
 
 **Author:** Jared Wilder  
 **Status:** exact structural theorem / obstruction; parent construction problem not closed  
-**Historical novelty:** not asserted; Kürschák-type 2-adic argument
+**Historical novelty:** not asserted; the `p=2` interval mechanism is Kürschák-type
+
+## Theorem 0 — an obstruction at every prime
+
+Let `S` be a finite set of integers `>=2` and suppose
+
+\[
+T:=\sum_{n\in S}\frac1n\in\mathbb Z.
+\]
+
+Fix any prime `p`, and define
+
+\[
+A_p=\{n/p:n\in S,\ p\mid n\}.
+\]
+
+Then
+
+\[
+\boxed{
+v_p\!\left(\sum_{m\in A_p}\frac1m\right)\ge1.
+}
+\]
+
+In words: after stripping exactly one factor of `p` from every denominator in `S` divisible by `p`, the reciprocal sum of that stripped subfamily must itself be divisible by `p` in the p-adic sense.
+
+### Proof
+
+Split the integer reciprocal sum into denominators prime to `p` and denominators divisible by `p`:
+
+\[
+T
+=
+\sum_{\substack{n\in S\\p\nmid n}}\frac1n
++
+\sum_{\substack{n\in S\\p\mid n}}\frac1n.
+\]
+
+Put
+
+\[
+U=\sum_{\substack{n\in S\\p\nmid n}}\frac1n,
+\qquad
+V=\sum_{m\in A_p}\frac1m.
+\]
+
+Then
+
+\[
+T=U+\frac1pV.
+\]
+
+Every denominator occurring in `U` is prime to `p`, so `U` is p-adically integral:
+
+\[
+v_p(U)\ge0.
+\]
+
+Also `T` is an ordinary integer, hence `v_p(T)>=0`. Therefore
+
+\[
+\frac1pV=T-U
+\]
+
+is p-adically integral. Thus
+
+\[
+v_p(V)-1\ge0,
+\]
+
+which is exactly
+
+\[
+v_p(V)\ge1.
+\]
+
+This proves the all-prime obstruction.
+
+### Interpretation
+
+An integer reciprocal sum cannot be certified prime-by-prime merely by total denominator clearing. For **every** prime occurring in the denominators, the p-divisible subfamily must satisfy its own induced divisibility condition after one p-factor is removed.
+
+The `p=2` case is the source of the parity mechanisms below.
+
+---
 
 ## Theorem 1 — one interval can never sum to an integer
 
@@ -80,6 +164,8 @@ Hence the cleared numerator
 
 is odd. Since `L` is even, the fraction cannot be an integer.
 
+---
+
 ## Theorem 2 — parity constraint for several interval blocks
 
 Consider finitely many nontrivial consecutive intervals `I_1,...,I_r`, allowing repetitions, and suppose
@@ -98,10 +184,16 @@ Clear a common lcm `L` of all denominators. A contribution is odd after clearing
 
 By the lemma, each block attaining level `E` contributes exactly one such odd term; every other contribution is even. Because `E>=1`, integrality forces the total cleared numerator to be even. Hence the number of odd contributions—and therefore the number of blocks attaining the global maximal level—must be even.
 
-## Boundary for Erdős #289
+Equivalently, in p-adic language the top 2-adic level cannot occur with odd multiplicity in an integral sum.
 
-The recovered campaign explored representations of `1` by sums of reciprocal interval blocks. The 2-adic theorem above is a genuine necessary obstruction, but it does not by itself construct representations for all large block counts or rule them out for infinitely many counts.
+---
 
-Later campaign state explicitly recognized that the parity condition is satisfiable and is not a parent close. This release therefore promotes the exact p-adic obstruction only.
+## Authority boundary
+
+The recovered estate records the all-prime theorem as a source-level `PROVED` statement and reports finite exact sanity checks, but it is **not kernel-certified** at universal scope. The proof above is therefore supplied explicitly and stands independently of the historical workflow label.
+
+The recovered #289 campaign explores representations of `1` by sums of reciprocal interval blocks. These p-adic conditions are genuine necessary obstructions, but they do not by themselves construct representations for all large block counts or rule them out for infinitely many counts.
+
+Later campaign state explicitly recognized that the 2-adic parity condition is satisfiable and is not a parent close. This release promotes the all-prime obstruction and its exact 2-adic interval consequences only.
 
 No novelty claim is made.
