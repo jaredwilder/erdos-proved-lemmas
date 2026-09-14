@@ -1,35 +1,48 @@
-# Erdős #681 — prime-residual reduction, finite atlas, and KBK frontier
+# Erdős #681 — exact residual program, finite atlas, and parent-close frontier
 
 **Author:** Jared Wilder  
-**Status:** parent open; several exact reductions and theorem-sized consequences established  
+**Status:** parent open; exact parent↔residual equivalence kernel-checked; substantial theorem/KBK estate established  
 **Updated:** 2026-09-14
 
-This page is the reader-facing index for the #681 work inside `erdos-proved-lemmas`. The parent problem remains open. The campaign is retained as a theorem/obstruction/KBK program rather than classified by whether the parent closed.
+This page is the reader-facing index for the #681 work inside `erdos-proved-lemmas`. The campaign is treated as a theorem/obstruction/KBK program. The only terminal target remains the original eventual statement.
 
 ## Parent problem
 
 For every sufficiently large integer `n`, does there exist an integer `k` such that `n+k` is composite and its least prime factor exceeds `k^2`?
 
-## Exact residual reduction
+## Exact parent ↔ prime-residual equivalence
 
-The elementary reduction is in [`../erdos681-fourth-root-search-reduction.md`](../erdos681-fourth-root-search-reduction.md).
+The central formal object is [`../erdos681-residual-equivalence.lean`](../erdos681-residual-equivalence.lean). Its theorem
 
-The stronger exact residual equivalence and its kernel-checked formal layer are in:
+`msl_erdos681_bundle_equivalence`
 
-- [`../erdos681-residual-equivalence.lean`](../erdos681-residual-equivalence.lean)
-- [`../erdos681-prime-residual-kbk-2026-09-14.md`](../erdos681-prime-residual-kbk-2026-09-14.md)
+kernel-checks the exact equivalence between the original parent and the residual statement:
 
-The hard inputs reduce to `n=p-1` with `p` prime. Writing `h=k-1`, the residual problem asks for an even `h>=2` such that
+> for every sufficiently large prime `p`, there exists an even shift `h>=2` such that `p+h` is composite and
+> `(h+1)^2 < minFac(p+h)`.
 
-\[
-p+h\text{ is composite},\qquad P^-(p+h)>(h+1)^2.
-\]
+Thus the parent close mission may work entirely on the prime residual **without weakening the problem**.
 
-Any such witness necessarily lies in the fourth-root window
+The elementary exposition is in [`../erdos681-fourth-root-search-reduction.md`](../erdos681-fourth-root-search-reduction.md).
 
-\[
-(h+1)^4<p+h.
-\]
+## Buried kernel theorem cluster
+
+The raw campaign formalized more than its terminal narrative foregrounded. The recovered theorem cluster is published in:
+
+- [`../erdos681-kernel-theorem-cluster-2026-09-14.md`](../erdos681-kernel-theorem-cluster-2026-09-14.md)
+- [`../erdos681-local-sieve-kernel.lean`](../erdos681-local-sieve-kernel.lean)
+
+Key exact facts include:
+
+- fixed short shifts automatically satisfy the fourth-root size condition once `p>(K+1)^4`;
+- if a prime `q<p` divides `k-1`, it cannot divide `p-1+k`;
+- a prime `r>K` can divide at most one member of a `K`-shift window;
+- among the 48 reduced classes modulo 105, exactly 33 kill the `k=3` residual shift, giving density `11/16`;
+- exact small-modulus residue-decoding lemmas;
+- a concrete modulus-growth receipt for the quantitative exceptional-set architecture;
+- the `H=41` smooth-covering size trap.
+
+These are now first-class public results rather than formalizer filenames buried in a transcript.
 
 ## Witness geometry extracted from the campaign
 
@@ -51,7 +64,9 @@ So any witness near the fourth-root boundary is forced to be a semiprime or prim
 \frac rq<\frac{m}{k^4},
 \]
 
-so endpoints close to `k^4` are forced toward balanced factorization.
+forcing increasingly balanced factors as the endpoint approaches the fourth-root boundary.
+
+The full KBK note is [`../erdos681-prime-residual-kbk-2026-09-14.md`](../erdos681-prime-residual-kbk-2026-09-14.md).
 
 ## Finite atlas
 
@@ -67,35 +82,33 @@ Across those chunks:
 - window-bad primes: **637,893**
 - largest recorded window-bad prime: **999,997,304,513**
 
-A second implementation was independently replayed on smaller windows and matched the C engine exactly. The interrupted giant bottom-up log is not treated as evidence.
+A second implementation was independently replayed on smaller windows and matched the C engine exactly. The interrupted giant bottom-up log is not evidence.
 
 ## Analytic KBK frontier
 
-The campaign developed a density-zero / exceptional-set route. A later audit unnecessarily lost a logarithm in the reduced-residue second-moment step. With the correct normalization, the intended covering-residue estimate returns to
+The campaign developed a density-zero / exceptional-set route. A later audit unnecessarily lost a logarithm in the reduced-residue second-moment step. With the corrected normalization, the intended covering-residue estimate is
 
 \[
-\delta(K)\ll \frac{\log^2 K}{K}+e^{-cK/\log K}.
+\delta(K)\ll \frac{\log^2 K}{K}+e^{-cK/\log K},
 \]
 
-The corresponding quantitative target is
+with corresponding quantitative target
 
 \[
 \#B(X)\ll \pi(X)\frac{(\log\log X)^2}{\sqrt{\log X}}.
 \]
 
-This is currently a **theorem candidate requiring a clean citation/effectivity writeup and priority court**, not a published parent-resolution claim.
+This remains a **theorem candidate requiring a clean source/effectivity and priority court**. Even if proved, it is not the parent close: density zero is weaker than eliminating all sufficiently large bad primes.
 
-## KBK status
+## Parent-close bottleneck
 
-The campaign produced:
+The exact kernel facts convert a hypothetical bad prime into a constrained deterministic covering object. Across a fourth-root-sized shift window:
 
-- an exact prime-residual equivalence;
-- a kernel-checked formal reduction bundle;
-- a fourth-root candidate window;
-- parity pruning;
-- a high-authority finite atlas through `10^12` in the recorded top-down range;
-- a factor-count hierarchy forcing near-boundary semiprime geometry;
-- a quantitative exceptional-set route;
-- explicit route kills identifying where present analytic methods stop.
+- every composite non-witness must have a small prime factor at most the shift square;
+- divisors of `k-1` are unavailable to kill that shift;
+- primes larger than the window can hit at most one shift;
+- any shift escaping all such small factors must be prime, otherwise it is already a witness.
 
-The parent remains open, but none of those outputs disappear because the terminal parent bit is still unknown.
+The full close therefore needs a **universalization theorem**: show that this constrained covering-plus-prime-exception object cannot exist for every sufficiently large prime, or construct an infinite bad-prime family and thereby resolve the parent negatively.
+
+No finite census, density-one theorem, conditional theorem, RH statement, or weaker exponent is accepted as terminal closure.
